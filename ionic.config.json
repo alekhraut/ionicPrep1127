@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path":"/v1",
+      "proxyUrl": "https://prp-int-reg.dev.zsservices.com/zs-prp-web/api/v1"
+    }
+  ]
 }
