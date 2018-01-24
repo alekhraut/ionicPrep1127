@@ -66,12 +66,12 @@ export class LoginPage {
     },
   error => {
     loading.dismiss();
-    alert("Service error"+ error) 
+    alert("Service error"+ JSON.stringify(error)) 
   });
      },
      error => {
        loading.dismiss();
-       alert("Service csrf error"+ error) 
+       alert("Service csrf error"+ JSON.stringify(error))
      });
     // this.authService.login(user).subscribe(
     // // this.("login").subscribe(
