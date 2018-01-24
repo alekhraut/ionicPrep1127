@@ -19,7 +19,7 @@ export class AppConfig{
         //     this.apiUrl = protocol + "://" + host + suffix
         // }
         // this.apiUrl = "http://10.1.14.118:8080/zs-prp-web/api/v1/";
-        this.apiUrl = "/v1/"
+        this.apiUrl = "https://prp-int-reg.dev.zsservices.com/zs-prp-web/api/v1/"
         console.log('completeurl ->' + this.apiUrl)
     }
 

@@ -62,8 +62,16 @@ export class LoginPage {
 
       this.authService.login(user).subscribe(data => {console.log('in login');
       loading.dismiss();
-      alert("Service successful")
-    });
+      alert("Service")
+    },
+  error => {
+    loading.dismiss();
+    alert("Service error"+ error) 
+  });
+     },
+     error => {
+       loading.dismiss();
+       alert("Service csrf error"+ error) 
      });
     // this.authService.login(user).subscribe(
     // // this.("login").subscribe(
