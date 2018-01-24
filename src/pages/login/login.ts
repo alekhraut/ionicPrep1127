@@ -58,21 +58,24 @@ export class LoginPage {
     });
   
     loading.present();
-    this.authService.getCSRFToken().subscribe(data => {
+    this.authService.testApi().subscribe(data => {
+      alert(JSON.stringify(data))
+    })
+  //   this.authService.getCSRFToken().subscribe(data => {
 
-      this.authService.login(user).subscribe(data => {console.log('in login');
-      loading.dismiss();
-      alert("Service")
-    },
-  error => {
-    loading.dismiss();
-    alert("Service error"+ JSON.stringify(error)) 
-  });
-     },
-     error => {
-       loading.dismiss();
-       alert("Service csrf error"+ JSON.stringify(error))
-     });
+  //     this.authService.login(user).subscribe(data => {console.log('in login');
+  //     loading.dismiss();
+  //     alert("Service")
+  //   },
+  // error => {
+  //   loading.dismiss();
+  //   alert("Service error"+ JSON.stringify(error)) 
+  // });
+  //    },
+  //    error => {
+  //      loading.dismiss();
+  //      alert("Service csrf error"+ JSON.stringify(error))
+  //    });
     // this.authService.login(user).subscribe(
     // // this.("login").subscribe(
     //   data => {

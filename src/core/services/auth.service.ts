@@ -61,6 +61,10 @@ export class AuthService {
     //   }
     //   );
   }
+
+  testApi() {
+    return this.ajaxManagerService.get('https://restcountries.eu/rest/v2/all');
+  }
   getCSRFToken() {
     return this.ajaxManagerService.get(this.appConfig.getApiUrl(ApiConstants.csrf_token));
   }
