@@ -59,7 +59,12 @@ export class LoginPage {
   
     loading.present();
     this.authService.testApi().subscribe(data => {
+      loading.dismiss();
       alert(JSON.stringify(data))
+     // loading.dismiss();
+    }, error => {
+      loading.dismiss();
+      alert(JSON.stringify(error));
     })
   //   this.authService.getCSRFToken().subscribe(data => {
 
