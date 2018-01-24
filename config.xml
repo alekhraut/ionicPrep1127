@@ -84,4 +84,9 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
     <engine name="ios" spec="~4.5.4" />
     <allow-navigation href="http://10.29.234.5:8100" />
+    <plugin name="cordova-plugin-ionic" spec="^3.0.0">
+        <variable name="APP_ID" value="f6e4c431" />
+        <variable name="CHANNEL_NAME" value="Master" />
+        <variable name="UPDATE_METHOD" value="background" />
+    </plugin>
 </widget>
