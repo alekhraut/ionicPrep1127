@@ -19,7 +19,7 @@ export class AuthInterceptor implements HttpInterceptor {
     // Clone the request to add the new header.
     this.pendingRequests++;
     req = req.clone({ headers: req.headers.set('Content-Type', 'application/json') });
-     req = req.clone({ headers: req.headers.set('X-Requested-With', 'XMLHttpRequest') });
+    // req = req.clone({ headers: req.headers.set('X-Requested-With', 'XMLHttpRequest') });
     if (this.csrfToken !== '') {
       req = req.clone({ headers: req.headers.set('X-CSRF-TOKEN', this.csrfToken) });
     }

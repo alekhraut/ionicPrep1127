@@ -7,7 +7,7 @@ import { APP_INITIALIZER } from "@angular/core";
 import { ConfigurationService } from "ionic-configuration-service";
 import { MyApp } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CookieXSRFStrategy, XSRFStrategy } from '@angular/http';
 import { CoreModule } from "../core/core.module";
 import { AppConfig } from './app.config';
 
@@ -71,7 +71,8 @@ export function loadConfiguration(configurationService: ConfigurationService){
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    { provide: ErrorHandler, useClass: MyErrorHandler }
+    { provide: ErrorHandler, useClass: MyErrorHandler },
+    { provide: XSRFStrategy, useValue: new CookieXSRFStrategy('myCookieName', 'X-CSRF-TOKEN')}
   ]
 })
 export class AppModule {}
