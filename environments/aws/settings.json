@@ -1,0 +1,9 @@
+{
+  "api":{
+    "protocol":"https",
+    "host":"prp-int-reg.dev.zsservices.com",
+    "port":"",
+    "suffix":"/zs-prp-web/api/v1/",
+    "suffix_public":"/zs-prp-web/public/api/v1/"
+  }
+}

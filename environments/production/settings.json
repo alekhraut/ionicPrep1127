@@ -1,0 +1,9 @@
+{
+  "api":{
+    "protocol":"http",
+    "host":"10.1.14.118",
+    "port":"9090",
+    "suffix":"/zs-prp-web/api/v1/",
+    "suffix_public":"/zs-prp-web/public/api/v1/"
+  }
+}

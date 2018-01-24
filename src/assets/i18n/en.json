@@ -1,0 +1,39 @@
+{
+    "login":{
+        "title":"Welcome to Patient Registry Platform!",
+        "login":"Login",
+        "username":"User Name",
+        "password":"Password"
+    },
+    "landing":{
+        "notstarted":"Not Started",
+        "inprogress":"In Progress",
+        "completed":"Completed",
+        "questionnaire":"Questionnaire",
+        "toptriggers":"Top Triggers",
+        "biosamplesummary":"Bio-sample Summary",
+        "summary":"Summary",
+        "diarycompletion":"Diary Completion"
+    },
+    "profile":{
+        "myinformation":"My Information",
+        "mymedication":"My Medication",
+        "years":"years",
+        "old":"old",
+        "dateofbirth":"Date of birth",
+        "cellnumber":"Cell Number",
+        "email":"Email ID",
+        "coordinator":"Co ordinator",
+        "physician":"Physician"
+    },
+    "sidemenu":{
+        "home":"Home",
+        "diary":"Diary",
+        "symptomhistory":"Symptom History",
+        "questionnaire":"Questionnaire",
+        "resources":"Resources",
+        "faqs":"FAQs",
+        "contact":"Contact",
+        "logout":"Logout"
+    }
+}

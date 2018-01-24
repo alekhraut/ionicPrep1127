@@ -1,0 +1,79 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true"  color="primary">
+    <ion-title>Profile</ion-title>
+    <button ion-button  menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+          <ion-segment color="primary" [(ngModel)]="selectedTab" (ionChange)="segmentChanged($value)">
+              <ion-segment-button value="{{'profile.myinformation' | translate}}" translate>
+                  profile.myinformation
+              </ion-segment-button>
+              <ion-segment-button value="{{'profile.mymedication' | translate}}" translate>
+                  profile.mymedication
+              </ion-segment-button>
+            </ion-segment>
+      </ion-col>
+    </ion-row>
+    <ng-container *ngIf="selectedTab === this.infoTab">
+    <ion-row class="border-bottom-1px-lightgray padding-20px-0px-20px-0px"> 
+      <ion-col col-12>
+            <div>
+                <div class="display-flex align-items-center">
+                    <div class="profile-row"></div>
+                    <div class="margin-left-20px">
+                        <div class="text-align-left font-size-1point5em">John Doe</div>    
+                        <div class="text-align-left padding-top-20px">36 Years old</div>
+                    </div>
+                </div>
+            </div>
+      </ion-col>
+    </ion-row>
+      <div class="padding-0px-20px-0px-30px">
+        <ion-row class="padding-top-20px">
+            <div class="width-100-percent display-inline-flex">
+              <ion-col col-6><div class="text-align-left" translate>profile.dateofbirth</div></ion-col>
+              <ion-col col-6><div class="width-200px text-align-left">01-Jan-1980</div></ion-col>
+            </div>
+        </ion-row>
+        <ion-row>
+            <div class="width-100-percent display-inline-flex">
+              <ion-col col-6><div class="text-align-left"translate>profile.cellnumber</div></ion-col>
+              <ion-col col-6><div class="width-200px text-align-left">555-555-1234</div></ion-col>
+            </div>
+        </ion-row>
+        <ion-row class="border-bottom-1px-lightgray padding-bottom-20px">
+            <div class="width-100-percent display-inline-flex">
+              <ion-col col-6><div class="text-align-left" translate>profile.email</div></ion-col>
+              <ion-col col-6><div class="width-200px text-align-left">john.doe@gmail.com</div></ion-col>
+            </div>
+        </ion-row>
+        <ion-row class="padding-top-20px">
+            <div class="width-100-percent display-inline-flex">
+              <ion-col col-6><div class="text-align-left" translate>profile.coordinator</div></ion-col>
+              <ion-col col-6><div class="width-200px text-align-left">Brian Taylor</div></ion-col>
+            </div>
+        </ion-row>
+        <ion-row>
+            <div class="width-100-percent display-inline-flex">
+              <ion-col col-6><div class="text-align-left" translate>profile.physician</div></ion-col>
+              <ion-col col-6><div class="width-200px text-align-left">Dr John Hyman</div></ion-col>
+            </div>
+        </ion-row>
+      </div>
+    </ng-container>
+  </ion-grid>
+</ion-content>

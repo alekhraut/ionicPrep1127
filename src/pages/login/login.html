@@ -1,0 +1,66 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <!-- <ion-title><h6 translate>login.title</h6></ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="moveToProfile()">
+            <ion-icon name="md-person"></ion-icon>
+          </button>
+      <button ion-button icon-only (click)="moveToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding no-bounce>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 style="text-align:center;margin-top: 100px"><h2 translate>login.title</h2></ion-col>
+    </ion-row>
+    
+    <form (ngSubmit)="login()" [formGroup]='loginForm'>
+      <ion-row>
+        <ion-col col-12>
+            <ion-item>
+                <ion-label floating translate>login.username</ion-label>
+                <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-12>
+              <div style="width: calc(100% - 8px);padding-left: 16px;" class="error" *ngIf="loginForm.controls.username.dirty && loginForm.controls.username.hasError('required')">Username is mandatory</div>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-12>
+            <ion-item>
+                <ion-label floating translate>login.password</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <div style="width: calc(100% - 8px);padding-left: 16px;" class="error" *ngIf="loginForm.controls.password.dirty && loginForm.controls.password.hasError('required')" >Password is mandatory</div>
+            </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <div class="divLoginButton" translate>
+              <button ion-button [disabled]="!loginForm.valid"><span translate>login.login</span></button>
+          </div>
+          <div>{{useremail}}</div>
+        </ion-col>
+      </ion-row>
+    </form> 
+  </ion-grid>
+</ion-content>

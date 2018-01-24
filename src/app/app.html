@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+    <ion-content>
+        <ion-list>
+            <ion-item style="padding: 0px !important;margin:0px !important;height:150px;">
+                <div menuClose (tap)="openProfilePage()">
+                    <div style="display: flex;align-items:center;">
+                        <div style="width:100px;height:100px; 
+                            margin-left: 20px;
+                            border: 1px solid steelblue;
+                            border-radius: 50px;
+                            ">
+                    </div>
+                        <span style="margin-left: 20px;">John Doe</span>
+                    </div>
+                </div>
+            </ion-item> 
+            <ion-item *ngFor="let p of pages" menuClose (click)="openPage(p)">
+                <span style="margin-left:20px">{{p.title}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>    
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
